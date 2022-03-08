@@ -1,0 +1,36 @@
+import java.util.Calendar;
+import java.util.Scanner;
+/*
+In the above section we make imports of the libraries we will need
+The first import allows us to get input from the keyboard and the
+second import allows us to use the system time thus no need to change our
+code next year
+ */
+public class Tutorial_1 {
+/*
+The main method will be the entry point into our program
+ */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Calendar date = Calendar.getInstance();
+        /*
+        Above we make object of libraries we imported
+         */
+        System.out.println("Please enter your birth year");
+        /*
+        this is a print statement that will bring the cursor to the next line
+         */
+        int birthYear = input.nextInt();
+        /*
+        create a variable to hold the input from the keyboard
+         */
+        int age = (date.get(Calendar.YEAR) - birthYear);
+        /*
+        calculate the age of the person - the current year less the entered year
+         */
+        System.out.println("You are "+ age + " years old.");
+        /*
+        Print the message while concatenating the calculated age
+         */
+    }
+}
